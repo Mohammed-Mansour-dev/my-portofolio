@@ -6,7 +6,7 @@ import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 
-export default function Home() {
+export default function TextAnimation({className = "",text =""}) {
     const firstText = useRef(null)
     const secondText = useRef(null)
     const slider = useRef(null)
@@ -41,7 +41,7 @@ export default function Home() {
     }
 
     return (
-        <main data-scroll data-scroll-speed=".21" className="absolute bottom-0 flex w-full mt-auto bg-transparent  overflow-hidden">
+        <main  className={`${className}`}>
 
 
             <div ref={slider} className="relative whitespace-nowrap">
@@ -49,14 +49,14 @@ export default function Home() {
                     ref={firstText}
                     className="relative m-0 text-white text-[70px] font-medium pr-[50px]"
                 >
-                    Creative Developer • Interactive Design • Smooth UX •
+                    {text}
                 </p>
 
                 <p
                     ref={secondText}
                     className="absolute left-full top-0 m-0 text-white text-[70px] font-medium pr-[50px]"
                 >
-                    Creative Developer • Interactive Design • Smooth UX •
+                    {text}
                 </p>
             </div>
 

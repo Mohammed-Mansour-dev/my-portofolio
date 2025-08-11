@@ -1,14 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Arima, Arimo, Comic_Neue } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const ComicNeue = Comic_Neue({
+  variable: "--font-comic-neue",
   subsets: ["latin"],
+  weight: ["400", "700","300"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const arimo = Arima({
+  variable: "--font-arimo",
   subsets: ["latin"],
+  weight: ["400", "700","500", "600"],
 });
 
 export const metadata = {
@@ -20,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${arimo.variable} ${ComicNeue.variable} antialiased`}
       >
         {children}
       </body>
