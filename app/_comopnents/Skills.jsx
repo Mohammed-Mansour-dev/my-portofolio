@@ -54,9 +54,11 @@ const Skills = () => {
 
   return (
     <div className='bg-[#040f16] space-y-8 py-24 font-arimo font-extrabold text-5xl ' >
-      <TextSlider containerClasses="text-[#8d9292]"  directiona={1} text={skillsPart1.join(' • ')} />
-      <TextSlider containerClasses="text-[#8d9292]" directiona={-1} text={skillsPart2.join(' • ')} />
-      <TextSlider containerClasses="text-[#8d9292]" directiona={1} text={skillsPart3.join(' • ')} />
+      <TextSlider containerClasses="text-[#8d9292]   " directiona={-1} text={skillsPart2.join(' • ')} />
+      <TextSlider containerClasses="text-[#8d9292]   "  directiona={1} text={skillsPart1.join(' • ')} />
+      <TextSlider containerClasses="text-[#8d9292]   " directiona={-1} text={skillsPart3.join(' • ')} />
+    
+    
     </div>
   );
 }

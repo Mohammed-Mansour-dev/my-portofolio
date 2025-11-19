@@ -24,3 +24,55 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+
+
+.gallery{
+    height: 175vh;
+    background: rgb(45, 45, 45);
+    position: relative;
+    display: flex;
+    gap: 2vw;
+    padding: 2vw;
+    box-sizing: border-box;
+    overflow: hidden;
+  
+}
+.spacer{
+    height: 100vh;
+}  
+.column{
+        position: relative;
+        height: 100%;
+        width: 25%;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+       
+      
+    } 
+      .column:nth-of-type(1){
+            top: -45%;
+        }
+        .column:nth-of-type(2){
+            top: -95%;
+        }
+        .column:nth-of-type(3){
+            top: -45%;
+        }
+        .column:nth-of-type(4){
+            top: -75%;
+        }
+    .imageContainer{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            border-radius: 1vw;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+            }
+        }

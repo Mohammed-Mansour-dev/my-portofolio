@@ -41,10 +41,10 @@ export default function TextSlider({directiona,containerClasses ,text}) {
     <main className={` ${containerClasses} relative flex h-fit  overflow-hidden`}>
      
      
-        <div ref={slidera} className="relative whitespace-nowrap">
+        <div ref={slidera} className="relative  whitespace-nowrap">
           <p
             ref={firstTexta}
-            className="relative   "
+            className="relative pr-5  "
           >
             {text}
           </p>

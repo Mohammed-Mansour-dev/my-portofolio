@@ -1,14 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import HeroSection from "./_comopnents/Hero";
 import { useEffect } from "react";
 import CapabilitiesSection from "./_comopnents/CapabilitiesSection";
-import ScrollTextColorReveal from "./_comopnents/ui/TextScrollOpacity";
 import Aboutme from "./_comopnents/Aboutme";
-import TextAnimation from "./_comopnents/ui/TextAnimation";
-import TextSlider from "./_comopnents/ui/TextSlider";
 import Skills from "./_comopnents/Skills";
+import ProjectsGallery from "./_comopnents/ProjectsGallery";
 
 export default function Home() {
 
@@ -32,12 +29,19 @@ export default function Home() {
   return (
     <div className="">
       <HeroSection />
-      <CapabilitiesSection/>
-    <Aboutme />
-     
-   <Skills />
+      <CapabilitiesSection />
+      <Aboutme />
 
-<div className="h-screen bg-[#54625a] "></div>
+      <Skills />
+<div className="bg-[#040f16]" >
+      <div className="bg-gradient-to-r from-transparent via-[#8d9292]/50 to-transparent h-1 w-full"/>
+
+</div>
+
+<ProjectsGallery />
+     
+
+
     </div>
   );
 }

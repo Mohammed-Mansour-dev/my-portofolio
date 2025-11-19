@@ -84,7 +84,7 @@ gsap.from(desc.lines, {
         <div ref={imageCoverRef} className="bg-[#040f16] absolute top-0 bottom-0 z-10 h-full transition-all duration-1000 right-0 w-full "></div>
         <div ref={imageRef} className="w-full h-full relative overflow-hidden">
           <Image
-            src="/ccc.jpg"
+            src="/personal.webp"
             alt="Creative background"
             fill
             className="object-cover brightness-[0.9] z-[1]"
