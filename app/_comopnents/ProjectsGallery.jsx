@@ -4,6 +4,7 @@
 import { mouseScaleGallery } from "@/lib/data";
 import Image from "next/image";
 import { useRef, useEffect } from "react";
+import SpiralArrow from "./ui/SpiralArrow";
 
 export default function ProjectsGallery() {
   // Pair items: [0,1], [2,3], ...
@@ -58,7 +59,7 @@ export default function ProjectsGallery() {
     return (
       <div
         onMouseMove={handleMove}
-        className="flex flex-col md:min-h-[90vh] md:flex-row gap-5 md:gap-0 mt-[10vh] select-none transition-all duration-300"
+        className="flex flex-col md:min-h-[90vh] md:flex-row gap-5 md:gap-0  select-none transition-all duration-300"
       >
         {/* FIRST */}
         <div
@@ -109,9 +110,22 @@ export default function ProjectsGallery() {
 
   return (
     <main className="text-white  pt-25 pb-[10vh] bg-[#040f16]">
-      <h1 className="text-[6vw] md:text-[3vw] max-w-[90%] md:max-w-[70%] leading-tight font-normal p-5">
-      Chek out some of my <br/> recent projects
-      </h1>
+
+
+
+
+    <SpiralArrow />
+
+ 
+
+
+
+
+
+
+
+     
+
 
       <div>
         {pairs.map((pair, index) => (

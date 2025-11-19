@@ -1,18 +1,44 @@
-import { Arima, Arimo, Comic_Neue } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 
-const ComicNeue = Comic_Neue({
-  variable: "--font-comic-neue",
-  subsets: ["latin"],
-  weight: ["400", "700","300"],
+
+const pre = localFont({
+  src: [
+    { path: "../public/fonts/PermanentMarker-Regular.ttf", weight: "400", style: "normal" },
+   
+  ],
+  variable: "--font-pre",
 });
 
-const arimo = Arima({
-  variable: "--font-arimo",
-  subsets: ["latin"],
-  weight: ["400", "700","500", "600"],
+const ComicNeue = localFont({
+  src: [
+    { path: "../public/fonts/ComicNeue-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../public/fonts/ComicNeue-Bold.ttf", weight: "700", style: "normal" },
+    { path: "../public/fonts/ComicNeue-Light.ttf", weight: "300", style: "normal" },
+    { path: "../public/fonts/ComicNeue-BoldItalic.ttf", weight: "700", style: "italic" },
+    { path: "../public/fonts/ComicNeue-Italic.ttf", weight: "400", style: "italic" },
+    { path: "../public/fonts/ComicNeue-LightItalic.ttf", weight: "300", style: "italic" },
+  ],
+  variable: "--font-comic-neue",
 });
+
+const Arima = localFont({
+  src: [
+    { path: "../public/fonts/Arima-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../public/fonts/Arima-Medium.ttf", weight: "500", style: "normal" },
+    { path: "../public/fonts/Arima-SemiBold.ttf", weight: "600", style: "normal" },
+    { path: "../public/fonts/Arima-Bold.ttf", weight: "700", style: "normal" },
+    { path: "../public/fonts/Arima-Light.ttf", weight: "300", style: "normal" },
+    { path: "../public/fonts/Arima-ExtraLight.ttf", weight: "200", style: "normal" },
+    { path: "../public/fonts/Arima-Thin.ttf", weight: "100", style: "normal" },
+  ],
+  variable: "--font-arima",
+});
+
+
+
+
 
 export const metadata = {
   title: "Create Next App",
@@ -23,7 +49,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={` ${arimo.variable} ${ComicNeue.variable} antialiased`}
+        className={` ${pre.variable}  ${Arima.variable} ${ComicNeue.variable} antialiased`}
       >
         {children}
       </body>
