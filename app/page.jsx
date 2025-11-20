@@ -30,7 +30,8 @@ export default function Home() {
     <div className="">
       <HeroSection />
       <CapabilitiesSection />
-      <Aboutme />
+
+    <Aboutme />
 
       <Skills />
 <div className="bg-[#040f16]" >
@@ -39,8 +40,6 @@ export default function Home() {
 </div>
 
 <ProjectsGallery />
-     
-
 
     </div>
   );

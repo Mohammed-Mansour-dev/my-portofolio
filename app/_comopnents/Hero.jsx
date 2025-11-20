@@ -75,31 +75,32 @@ gsap.from(desc.lines, {
   }, []);
 
   return (
-    <section className="flex  h-screen relative overflow-hidden flex-col md:flex-row">
+    <section className="flex  w-full h-screen relative overflow-hidden flex-col md:flex-row">
 
 
 
       {/* Left Section */}
-      <div className="w-full  bg-[#8e9294]  md:w-1/2 md:h-full relative">
+      <div className="w-full  -red-500 z-10 bg-[#8e9294]  md:w-1/2 h-full absolute md:relative">
         <div ref={imageCoverRef} className="bg-[#040f16] absolute top-0 bottom-0 z-10 h-full transition-all duration-1000 right-0 w-full "></div>
         <div ref={imageRef} className="w-full h-full relative overflow-hidden">
           <Image
             src="/personal.webp"
             alt="Creative background"
             fill
-            className="object-cover brightness-[0.9] z-[1]"
+          
+            className="object-cover  brightness-[0.9] z-[1]   max-md:grayscale-100 "
           />
 
         </div>
       </div>
 
       {/* Right Section */}
-      <div className="w-full h-1/2 md:w-1/2 md:h-full bg-[#040f16] flex justify-center items-center relative overflow-hidden ">
+      <div className="w-full  md:w-1/2 z-20 h-full md:bg-[#040f16] flex justify-center items-center relative overflow-hidden ">
         <div className=" w-full h-full ">
-          <div ref={cardRef} className=" text-2xl bg-[#54625a]/90 mt-32 w-fit ml-auto rounded-tl-2xl rounded-bl-2xl pl-7 py-3 pr-14 ">
+          <div ref={cardRef} className=" text-base md:text-2xl bg-[#54625a]/90 mt-7 md:mt-32 w-fit ml-auto rounded-tl-2xl rounded-bl-2xl pl-4 md:pl-7 py-1.5 md:py-3 pr-5 md:pr-14 ">
             <h1 className='flex font-arimo flex-col' >
               <span className='flex wordsp items-center' >Fullstack
-                <svg className='ml-1' width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className='ml-1 size-5 md:size-8 '  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.46967 17.4697C5.17678 17.7626 5.17678 18.2374 5.46967 18.5303C5.76256 18.8232 6.23744 18.8232 6.53033 18.5303L5.46967 17.4697ZM6.53033 18.5303L18.5303 6.53033L17.4697 5.46967L5.46967 17.4697L6.53033 18.5303Z" fill="#fff" />
                   <path d="M9 6H18V15" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -109,7 +110,7 @@ gsap.from(desc.lines, {
               </span>
             </h1>
           </div>
-          <div className='md:max-w-96 md:ml-20   mt-24' >
+          <div className='md:max-w-96 max-md:text-shadow-sm text-shadow-[#4c5953] md:ml-20 max-md:px-3 mt-52 md:mt-24' >
             <h1 className='text-6xl font-arimo split font-bold' >Hello ,I am Mohammed</h1>
             <p className='my-2 font-semibold font-comic text-lg desc  text-gray-400 ' >Full Stack Developer passionate about crafting clean, functional, and user-friendly web applications, and intuitive digital experiences.</p>
           </div>
@@ -117,7 +118,7 @@ gsap.from(desc.lines, {
       </div>
     
     
-      <TextAnimation text="Creative Developer • Interactive Design • Smooth UX •" className="font-arimo h-fit  bottom-0 flex w-full absolute mt-auto bg-transparent " />
+      <TextAnimation text="Creative Developer • Interactive Design • Smooth UX •" className="font-arimo h-fit  bottom-0 flex z-30 w-full absolute mt-auto bg-transparent " />
  
     </section>
   );

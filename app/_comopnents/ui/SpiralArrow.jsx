@@ -60,7 +60,7 @@ export default function CurvedArrowSpiralSection() {
 
   return (
     <>
-      <section ref={sectionRef} className="relative  bg-[#040f16] text-white px-5 md:px-12 ">
+      <section ref={sectionRef} className="relative  bg-[#040f16] text-white px-5 md:px-12 max-w-screen overflow-hidden ">
         {/* LEFT Title */}
         <h1 className="text-7xl font-pre text-[#919497] md:text-8xl  font- leading-tight ">
 

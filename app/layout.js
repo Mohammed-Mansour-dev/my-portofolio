@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={` ${pre.variable}  ${Arima.variable} ${ComicNeue.variable} antialiased`}
+        className={` ${pre.variable}  ${Arima.variable} ${ComicNeue.variable}  antialiased`}
       >
         {children}
       </body>

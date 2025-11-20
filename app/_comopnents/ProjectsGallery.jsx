@@ -10,7 +10,6 @@ export default function ProjectsGallery() {
   // Pair items: [0,1], [2,3], ...
   const pairs = [];
   for (let i = 0; i < mouseScaleGallery.length; i += 2) {
-    console.log(i);
     pairs.push([mouseScaleGallery[i], mouseScaleGallery[i + 1]]);
   }
 
