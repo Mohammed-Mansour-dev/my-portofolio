@@ -3,35 +3,37 @@ import TextSlider from './ui/TextSlider'
 
 const Skills = () => {
   const skills = [
-    "Docker",
-    "Figma",
     "TypeScript",
     "Node.js",
     "MongoDB",
     "Rest API",
+    "ChatGPT",
     "Redux",
     "Javascript",
     "Git",
+    "Postman",
+
     "Github",
     "PostgreSQL",
     "Express.js",
     "Strapi",
     "Prisma",
     "GraphQl",
-    "Vercel",
     "Next.js",
     "React",
     "Tailwind",
     "CSS",
     "HTML",
-    "Figma",
     "TypeScript",
     "Node.js",
     "MongoDB",
+    "Postman",
+
     "Rest API",
     "Redux",
     "Javascript",
     "Git",
+    "ChatGPT",
     "Github",
     "PostgreSQL",
     "Express.js",
@@ -40,7 +42,9 @@ const Skills = () => {
     "GraphQl",
     "Vercel",
     "Next.js",
+    "Postman",
     "React",
+    "ChatGPT",
     "Tailwind",
     "CSS",
     "HTML"
@@ -55,10 +59,10 @@ const Skills = () => {
   return (
     <div className='bg-[#040f16] space-y-8 py-24 font-arimo font-extrabold text-5xl ' >
       <TextSlider containerClasses="text-[#8d9292]   " directiona={-1} text={skillsPart2.join(' • ')} />
-      <TextSlider containerClasses="text-[#8d9292]   "  directiona={1} text={skillsPart1.join(' • ')} />
+      <TextSlider containerClasses="text-[#8d9292]   " directiona={1} text={skillsPart1.join(' • ')} />
       <TextSlider containerClasses="text-[#8d9292]   " directiona={-1} text={skillsPart3.join(' • ')} />
-    
-    
+
+
     </div>
   );
 }

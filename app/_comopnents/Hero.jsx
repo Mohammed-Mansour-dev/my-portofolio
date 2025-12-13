@@ -63,7 +63,7 @@ gsap.from(desc.lines, {
     gsap.from(cardRef.current, {
       xPercent: 100,
       duration: 1.5,
-      
+      delay: 1.5,
       ease: 'power3.out',
     })
 

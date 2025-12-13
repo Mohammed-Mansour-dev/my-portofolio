@@ -6,6 +6,7 @@ import CapabilitiesSection from "./_comopnents/CapabilitiesSection";
 import Aboutme from "./_comopnents/Aboutme";
 import Skills from "./_comopnents/Skills";
 import ProjectsGallery from "./_comopnents/ProjectsGallery";
+import Footer from "./_comopnents/Footer";
 
 export default function Home() {
 
@@ -40,6 +41,29 @@ export default function Home() {
 </div>
 
 <ProjectsGallery />
+
+
+<Footer />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </div>
   );
