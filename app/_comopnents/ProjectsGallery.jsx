@@ -54,7 +54,7 @@ export default function ProjectsGallery() {
 
     const ctx = gsap.context(() => {
       const reduce = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
+        "(prefers-reduced-motion: reduce)",
       ).matches;
 
       const q = gsap.utils.selector(el);
@@ -82,21 +82,22 @@ export default function ProjectsGallery() {
         .from(
           line,
           {
-            strokeDashoffset: (i, t) => t.getTotalLength ? t.getTotalLength() : 600,
+            strokeDashoffset: (i, t) =>
+              t.getTotalLength ? t.getTotalLength() : 600,
             duration: 1.4,
             ease: "power2.inOut",
           },
-          "-=0.7"
+          "-=0.7",
         )
         .from(
           rule,
           { scaleX: 0, transformOrigin: "left center", duration: 0.9 },
-          "-=1.0"
+          "-=1.0",
         )
         .from(
           meta,
           { y: 14, opacity: 0, duration: 0.7, stagger: 0.08 },
-          "-=0.6"
+          "-=0.6",
         )
         .from(countEl, { y: 14, opacity: 0, duration: 0.6 }, "-=0.5");
     }, el);
@@ -112,7 +113,7 @@ export default function ProjectsGallery() {
   const step = total > 1 ? (viewH - pad * 2) / (total - 1) : 0;
   const nodeYs = useMemo(
     () => Array.from({ length: total }).map((_, i) => pad + step * i),
-    [step, total]
+    [step, total],
   );
 
   const spineD = useMemo(() => {
@@ -143,7 +144,7 @@ export default function ProjectsGallery() {
 
     const ctx = gsap.context(() => {
       const reduce = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
+        "(prefers-reduced-motion: reduce)",
       ).matches;
 
       const length = path.getTotalLength();
@@ -250,13 +251,32 @@ export default function ProjectsGallery() {
           className="relative flex min-h-[68vh] flex-col justify-end pb-16 pt-[22vh] sm:min-h-[72vh] lg:pb-24 lg:pt-[26vh]"
         >
           <div className="grid grid-cols-12 items-end gap-6">
-            <div className="col-span-12 flex items-center gap-4 lg:col-span-4"> <span className="h-px w-10 bg-[#3d3d40]" /> <span className="text-[10px] uppercase tracking-[0.42em] text-[#7a7a7d]">   Section 05 / Projects </span>
+            <div className="col-span-12 flex items-center gap-4 lg:col-span-4">
+              {" "}
+              <span className="h-px w-10 bg-[#3d3d40]" />{" "}
+              <span className="text-[10px] uppercase tracking-[0.42em] text-[#7a7a7d]">
+                {" "}
+                Section 05 / Projects{" "}
+              </span>
             </div>
 
-            <div className="col-span-6 order-3 lg:order-2 lg:col-span-4 lg:text-center"> <span   data-intro-count   className="block text-[10px] uppercase tracking-[0.42em] text-[#8a8a8d]" >   01 — {String(total).padStart(2, "0")} </span>
+            <div className="col-span-6 order-3 lg:order-2 lg:col-span-4 lg:text-center">
+              {" "}
+              <span
+                data-intro-count
+                className="block text-[10px] uppercase tracking-[0.42em] text-[#8a8a8d]"
+              >
+                {" "}
+                01 — {String(total).padStart(2, "0")}{" "}
+              </span>
             </div>
 
-            <div className="col-span-6 order-4 flex items-center justify-end lg:order-3 lg:col-span-4"> <span className="text-[10px] uppercase tracking-[0.42em] text-[#5c5c5f]">   Curated selection </span>
+            <div className="col-span-6 order-4 flex items-center justify-end lg:order-3 lg:col-span-4">
+              {" "}
+              <span className="text-[10px] uppercase tracking-[0.42em] text-[#5c5c5f]">
+                {" "}
+                Curated selection{" "}
+              </span>
             </div>
           </div>
 
@@ -264,17 +284,61 @@ export default function ProjectsGallery() {
             id="projects-heading"
             className="mt-12 select-none leading-[0.82] lg:mt-16"
           >
-            <span className="block overflow-hidden"> <span   data-intro-word   className="block text-[clamp(3.4rem,13vw,11rem)] font-medium uppercase tracking-[-0.03em] text-[#efeee9]" >   <span className="block will-change-transform">Selected</span> </span>
+            <span className="block overflow-hidden">
+              {" "}
+              <span
+                data-intro-word
+                className="block text-[clamp(3.4rem,13vw,11rem)] font-medium uppercase tracking-[-0.03em] text-[#efeee9]"
+              >
+                {" "}
+                <span className="block will-change-transform">
+                  Selected
+                </span>{" "}
+              </span>
             </span>
-            <span className="relative block overflow-hidden"> <span   data-intro-word   className="block text-[clamp(3.4rem,13vw,11rem)] font-medium uppercase tracking-[-0.03em] text-[#efeee9]" >   <span className="block will-change-transform">Work</span> </span> <svg   data-intro-line   viewBox="0 0 800 6"   preserveAspectRatio="none"   className="mt-3 h-1.5 w-full max-w-180 text-[#6f6f72]"   aria-hidden >   <path d="M0 3 H800" stroke="currentColor"   strokeWidth="1"     fill="none"     strokeDasharray="1"     strokeDashoffset="0"     pathLength={1}   /> </svg>
+            <span className="relative block overflow-hidden">
+              {" "}
+              <span
+                data-intro-word
+                className="block text-[clamp(3.4rem,13vw,11rem)] font-medium uppercase tracking-[-0.03em] text-[#efeee9]"
+              >
+                {" "}
+                <span className="block will-change-transform">Work</span>{" "}
+              </span>{" "}
+              <svg
+                data-intro-line
+                viewBox="0 0 800 6"
+                preserveAspectRatio="none"
+                className="mt-3 h-1.5 w-full max-w-180 text-[#6f6f72]"
+                aria-hidden
+              >
+                {" "}
+                <path
+                  d="M0 3 H800"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  fill="none"
+                  strokeDasharray="1"
+                  strokeDashoffset="0"
+                  pathLength={1}
+                />{" "}
+              </svg>
             </span>
           </h2>
 
           <div className="mt-10 grid grid-cols-12 items-end gap-6 lg:mt-14">
-            <p data-intro-meta className="col-span-12 max-w-xl text-sm leading-relaxed text-[#9a9a9d] lg:col-span-7"
-            > A curated passage through recent work — platforms, organisations and experiments delivered with an emphasis on structure, restraint and long-term maintainability.
+            <p
+              data-intro-meta
+              className="col-span-12 max-w-xl text-sm leading-relaxed text-[#9a9a9d] lg:col-span-7"
+            >
+              {" "}
+              A curated passage through recent work — platforms, organisations
+              and experiments delivered with an emphasis on structure, restraint
+              and long-term maintainability.
             </p>
-            <span data-intro-rule className="col-span-12 block h-px w-full origin-left bg-[#2f2f31] lg:col-span-5"
+            <span
+              data-intro-rule
+              className="col-span-12 block h-px w-full origin-left bg-[#2f2f31] lg:col-span-5"
             />
           </div>
         </div>
@@ -286,8 +350,56 @@ export default function ProjectsGallery() {
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-0 hidden h-full w-30 -translate-x-1/2 lg:block"
           >
-            <svg ref={svgRef} viewBox={`0 0 120 ${viewH}`} preserveAspectRatio="none" className="h-full w-full"
-            > <path   ref={pathRef}   d={spineD}   stroke="#6f6f72"   strokeOpacity="0.55"   strokeWidth="1"   fill="none"   strokeLinecap="round"   vectorEffect="non-scaling-stroke" /> {nodeYs.map((y, i) => (   <g     key={`node-${i}`}     ref={(el) => {       nodeRefs.current[i] = el;     }}   >     <circle       data-node       cx={60}       cy={y}       r={3}       fill="#0e0e0f"       stroke="#9a9a9d"       strokeWidth="1"       opacity={0.5}       vectorEffect="non-scaling-stroke"     />     <text       data-node-label       x={78}       y={y + 3}       fontSize="9"       letterSpacing="3"       fill="#8a8a8d"       opacity={0.35}     >       {String(i + 1).padStart(2, "0")}     </text>   </g> ))}
+            <svg
+              ref={svgRef}
+              viewBox={`0 0 120 ${viewH}`}
+              preserveAspectRatio="none"
+              className="h-full w-full"
+            >
+              {" "}
+              <path
+                ref={pathRef}
+                d={spineD}
+                stroke="#6f6f72"
+                strokeOpacity="0.55"
+                strokeWidth="1"
+                fill="none"
+                strokeLinecap="round"
+                vectorEffect="non-scaling-stroke"
+              />{" "}
+              {nodeYs.map((y, i) => (
+                <g
+                  key={`node-${i}`}
+                  ref={(el) => {
+                    nodeRefs.current[i] = el;
+                  }}
+                >
+                  {" "}
+                  <circle
+                    data-node
+                    cx={60}
+                    cy={y}
+                    r={3}
+                    fill="#0e0e0f"
+                    stroke="#9a9a9d"
+                    strokeWidth="1"
+                    opacity={0.5}
+                    vectorEffect="non-scaling-stroke"
+                  />{" "}
+                  <text
+                    data-node-label
+                    x={78}
+                    y={y + 3}
+                    fontSize="9"
+                    letterSpacing="3"
+                    fill="#8a8a8d"
+                    opacity={0.35}
+                  >
+                    {" "}
+                    {String(i + 1).padStart(2, "0")}{" "}
+                  </text>{" "}
+                </g>
+              ))}
             </svg>
           </div>
 
@@ -296,13 +408,56 @@ export default function ProjectsGallery() {
             aria-label="Project progress"
             className="pointer-events-none sticky top-24 z-20 hidden w-fit backdrop-blur-sm lg:block"
           >
-            <div className="flex flex-col gap-4"> <span className="text-[10px] uppercase tracking-[0.42em] text-[#5c5c5f]">   Selected Work </span> <ul className="flex flex-col gap-3">   {projects.map((p, i) => {     const num = String(i + 1).padStart(2, "0");     return (       <li         key={p.slug || num}         ref={(el) => {           railItemsRef.current[i] = el;         }}         className="flex items-center gap-3 opacity-30"         aria-current={i === activeIndex ? "true" : undefined}       >         <span           data-dot           aria-hidden           className="inline-block h-1.5 w-1.5 rounded-full bg-[#4a4a4d]"         />         <span className="tabular-nums text-[11px] tracking-[0.4em] text-[#c9c7c2]">           {num}         </span>         <span className="sr-only">{p.name}</span>       </li>     );   })} </ul>
+            <div className="flex flex-col gap-4">
+              {" "}
+              <span className="text-[10px] uppercase tracking-[0.42em] text-[#5c5c5f]">
+                {" "}
+                Selected Work{" "}
+              </span>{" "}
+              <ul className="flex flex-col gap-3">
+                {" "}
+                {projects.map((p, i) => {
+                  const num = String(i + 1).padStart(2, "0");
+                  return (
+                    <li
+                      key={p.slug || num}
+                      ref={(el) => {
+                        railItemsRef.current[i] = el;
+                      }}
+                      className="flex items-center gap-3 opacity-30"
+                      aria-current={i === activeIndex ? "true" : undefined}
+                    >
+                      {" "}
+                      <span
+                        data-dot
+                        aria-hidden
+                        className="inline-block h-1.5 w-1.5 rounded-full bg-[#4a4a4d]"
+                      />{" "}
+                      <span className="tabular-nums text-[11px] tracking-[0.4em] text-[#c9c7c2]">
+                        {" "}
+                        {num}{" "}
+                      </span>{" "}
+                      <span className="sr-only">{p.name}</span>{" "}
+                    </li>
+                  );
+                })}{" "}
+              </ul>
             </div>
           </nav>
 
           {/* Project chapters */}
           <ul className="relative flex flex-col gap-[14vh] py-[10vh] sm:gap-[18vh] lg:gap-[22vh]">
-            {projects.map((project, i) => ( <li key={project.slug || i}>   <ProjectChapter     project={project}     index={i}     total={total}     layout={LAYOUTS[i % LAYOUTS.length]}     onActivate={handleActivate}   /> </li>
+            {projects.map((project, i) => (
+              <li key={project.slug || i}>
+                {" "}
+                <ProjectChapter
+                  project={project}
+                  index={i}
+                  total={total}
+                  layout={LAYOUTS[i % LAYOUTS.length]}
+                  onActivate={handleActivate}
+                />{" "}
+              </li>
             ))}
           </ul>
         </div>
@@ -334,7 +489,7 @@ function ProjectChapter({ project, index, total, layout, onActivate }) {
 
     const ctx = gsap.context(() => {
       const reduce = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
+        "(prefers-reduced-motion: reduce)",
       ).matches;
 
       const q = gsap.utils.selector(el);
@@ -356,9 +511,13 @@ function ProjectChapter({ project, index, total, layout, onActivate }) {
           {
             yPercent: 4,
             ease: "none",
-            scrollTrigger: { trigger: el, start: "top bottom", end: "bottom top", scrub: 0.8,
+            scrollTrigger: {
+              trigger: el,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.8,
             },
-          }
+          },
         );
       }
 
@@ -434,7 +593,7 @@ function ProjectImage({ project, index, priority = false, align }) {
 
     const ctx = gsap.context(() => {
       const reduce = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
+        "(prefers-reduced-motion: reduce)",
       ).matches;
       const onDesktop = window.matchMedia("(min-width: 1024px)").matches;
 
@@ -456,12 +615,12 @@ function ProjectImage({ project, index, priority = false, align }) {
       tl.fromTo(
         frameEl,
         { clipPath: "inset(100% 0% 0% 0%)" },
-        { clipPath: "inset(0% 0% 0% 0%)", duration: 1.25 }
+        { clipPath: "inset(0% 0% 0% 0%)", duration: 1.25 },
       ).fromTo(
         innerEl,
         { yPercent: 9, scale: 1.08 },
         { yPercent: 0, scale: 1, duration: 1.4 },
-        "<"
+        "<",
       );
 
       if (onDesktop) {
@@ -473,9 +632,7 @@ function ProjectImage({ project, index, priority = false, align }) {
           duration: 0.6,
           ease: "power3",
         });
-        const oTo = overlayEl
-          ? gsap.quickTo(overlayEl, "autoAlpha", { duration: 0.5 })
-          : null;
+       
         const borderTo = gsap.quickTo(frameEl, "borderColor", {
           duration: 0.5,
         });
@@ -489,14 +646,17 @@ function ProjectImage({ project, index, priority = false, align }) {
           yTo(ny * 16);
         };
         const onEnter = () => {
-          if (oTo) oTo(1);
+          if (overlayEl) {
+            gsap.to(overlayEl, { autoAlpha: 1, duration: 0.5 });
+          }
           borderTo("#8a8a8d");
         };
+
         const onLeave = () => {
-          xTo(0);
-          yTo(0);
-          if (oTo) oTo(0);
-          borderTo("#2a2a2c");
+          if (overlayEl) {
+            gsap.to(overlayEl, { autoAlpha: 0, duration: 0.5 });
+          }
+          borderTo("transparent");
         };
 
         wrapEl.addEventListener("pointermove", onMove);
@@ -533,21 +693,56 @@ function ProjectImage({ project, index, priority = false, align }) {
             className="relative aspect-4/5 w-full sm:aspect-16/11 lg:aspect-4/5 xl:aspect-5/6"
             style={{ willChange: "transform" }}
           >
-            <Image src={`/images/mouse-scale-gallery/${project.image}`} alt={`${project.name} — ${project.category}`} fill priority={priority} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 60vw" className="object-cover object-top filter grayscale brightness-50"
+            <Image
+              src={`/images/mouse-scale-gallery/${project.image}`}
+              alt={`${project.name} — ${project.category}`}
+              fill
+              priority={priority}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 60vw"
+              className="object-cover object-top filter grayscale brightness-50"
             />
 
-            <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay" style={{   backgroundImage:     "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>\")", }}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay"
+              style={{
+                backgroundImage:
+                  "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>\")",
+              }}
             />
 
-            <div aria-hidden className="pointer-events-none absolute inset-3 border border-white/5"
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-3 border border-white/5"
             />
 
-            <span className={`absolute top-4 z-10 text-[10px] uppercase tracking-[0.4em] text-white/70 ${   align === "left" ? "left-4" : "right-4" }`}
-            > {num}
+            <span
+              className={`absolute top-4 z-10 text-[10px] uppercase tracking-[0.4em] text-white/70 ${align === "left" ? "left-4" : "right-4"}`}
+            >
+              {" "}
+              {num}
             </span>
 
-            <div ref={overlay} aria-hidden className="pointer-events-none absolute inset-0 flex items-end justify-between bg-linear-to-t from-black/55 via-black/10 to-transparent p-5 opacity-0"
-            > <span className="text-[10px] uppercase tracking-[0.42em] text-white/90">   View Project </span> <svg   viewBox="0 0 24 24"   className="h-4 w-4 text-white/90"   fill="none"   stroke="currentColor"   strokeWidth="1.5" >   <path d="M7 17 17 7" />   <path d="M9 7h8v8" /> </svg>
+            <div
+              ref={overlay}
+              aria-hidden
+              className="pointer-events-none absolute inset-0 flex items-end justify-between bg-linear-to-t from-black/55 via-black/10 to-transparent p-5 opacity-0"
+            >
+              {" "}
+              <span className="text-[10px] uppercase tracking-[0.42em] text-white/90">
+                {" "}
+                View Project{" "}
+              </span>{" "}
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4 text-white/90"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                {" "}
+                <path d="M7 17 17 7" /> <path d="M9 7h8v8" />{" "}
+              </svg>
             </div>
           </div>
         </div>
@@ -621,7 +816,8 @@ function ProjectMeta({ project, index, total }) {
             className="flex items-center gap-3"
           >
             <span>{tech}</span>
-            {i < project.stack.length - 1 && ( <span className="text-[#3a3a3c]">/</span>
+            {i < project.stack.length - 1 && (
+              <span className="text-[#3a3a3c]">/</span>
             )}
           </span>
         ))}
@@ -633,29 +829,35 @@ function ProjectMeta({ project, index, total }) {
         data-meta-item
         className="mt-6 flex flex-wrap items-center justify-between gap-4"
       >
-           {project.website && (
+        {project.website && (
           <a
             href={project.website}
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex cursor-pointer items-center gap-2 text-lg text-[#d8d6d1] transition-colors hover:text-white focus:outline-none focus-visible:underline"
           >
-            <span className="size-2 bg-gray-400 border border-gray-500 animate-ping rounded-full" ></span>
+            <span className="size-2 bg-gray-400 border border-gray-500 animate-ping rounded-full"></span>
             <span>{project.website}</span>
-            <svg viewBox="0 0 24 24" className="h-4 w-4 animate-bounce translate-x-0 transition-transform duration-500 ease-out group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden
-            > <path d="M7 17 17 7" /> <path d="M9 7h8v8" />
+            <svg
+              viewBox="0 0 24 24"
+              className="h-4 w-4 animate-bounce translate-x-0 transition-transform duration-500 ease-out group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              aria-hidden
+            >
+              {" "}
+              <path d="M7 17 17 7" /> <path d="M9 7h8v8" />
             </svg>
           </a>
-        )} 
-        
-          <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.42em] text-[#8b8b8e]">
+        )}
+
+        <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.42em] text-[#8b8b8e]">
           <span className="inline-block h-1 w-1 rounded-full bg-[#6e6e71]" />
           <span>{statusLabel}</span>
           <span className="text-[#3a3a3c]">·</span>
           <span className="tabular-nums">{project.year}</span>
         </div>
-
-  
       </div>
     </div>
   );
